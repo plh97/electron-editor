@@ -1,0 +1,35 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #fff;
+}
+.cross-all {
+  height: 100vh;
+  width: 100vw;
+}
+.cross-row {
+  width: 100vw;
+}
+.cross-col {
+  height: 100vh;
+}
+.index__layout {
+  display: flex;
+  flex-direction: row;
+}
+.index__layout .index__main {
+  flex: 0 0 160px;
+  background: #37383a;
+}
+.index__layout .index__nav {
+  flex: 0 1 300px;
+  background: #1f2022;
+}
+.index__layout .index__content {
+  flex: 1 1.5 500px;
+}
