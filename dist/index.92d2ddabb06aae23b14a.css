@@ -1,0 +1,21 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #fff;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+}
+.cross-all {
+  height: 100vh;
+  width: 100vw;
+}
+.cross-row {
+  width: 100vw;
+}
+.cross-col {
+  height: 100vh;
+}

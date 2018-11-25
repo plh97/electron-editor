@@ -54,7 +54,7 @@ module.exports = {
     }],
   },
   plugins: [
-    new CleanWebpackPlugin([distpath]),
+    new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin({
       filename: 'index.[hash].css',
     }),

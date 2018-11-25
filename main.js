@@ -9,8 +9,8 @@ let menu
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1000, 
-    height: 650,
+    width: 1200, 
+    height: 850,
     // titleBarStyle: 'hiddenInset',
     // transparent: true,
     backgroundColor: '#262626',
