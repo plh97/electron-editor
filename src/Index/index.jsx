@@ -16,23 +16,26 @@ import './index.less';
 const Index = ({
   main,createMain,deleteMain,
   nav,createNav,deleteNav,
-  content,changeContent
-}) =>
-  <Layout>
-    <div className="index__layout cross-all">
-      <Main
-        main={main}
-        create={createMain}
-        del={deleteMain}
-      />
-      <Nav 
-        nav={nav}
-        create={createNav}
-        del={deleteNav}
-      />
-      <Content content={content} change={changeContent}/>
-    </div>
-  </Layout>
+  content,changeContent,contentVal
+}) => {
+  console.log('content',content);
+  
+  return <Layout>
+      <div className="index__layout cross-all">
+        <Main
+          main={main}
+          create={createMain}
+          del={deleteMain}
+        />
+        <Nav 
+          nav={nav}
+          create={createNav}
+          del={deleteNav}
+        />
+        <Content contentVal={contentVal} content={content} change={changeContent}/>
+      </div>
+    </Layout>
+}
 
 function mapDispatchToProps(
   dispatch,
@@ -64,7 +67,8 @@ const mapStateToProps = function(state) {
   return {
     main: main ? main: null,
     nav: nav ? nav: null,
-    content: nav ? nav.children[nav.on] : null
+    content: nav ? nav.children[nav.on] : null,
+    contentVal: (nav&&nav.children[nav.on]) ? nav.children[nav.on].val : null   // 无法监听深层次json属性变化咋办....
   }
 }
 

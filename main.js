@@ -9,8 +9,10 @@ let menu
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1200, 
-    height: 850,
+    // width: 1200, 
+    // height: 850,
+    width: 1000,
+    height: 650,
     // titleBarStyle: 'hiddenInset',
     // transparent: true,
     backgroundColor: '#262626',
@@ -22,7 +24,7 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('./dist/index.html')
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

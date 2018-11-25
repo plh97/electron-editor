@@ -60,9 +60,16 @@
         .index-nav__detail {
           margin: 0;
           font-size: 13px;
+          display: flex;
+          flex-direction: row;
           .index-nav__content {
             margin-left: 5px;
             color: #ccc;
+            max-width: 145px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            user-select: none;
           }
         }
         &.on {
@@ -83,7 +90,7 @@
         font-size: 12px;
         textarea {
           width: 100%;
-          min-height: 80vh;
+          min-height: calc(100vh - 150px);
           background: rgba(0, 0, 0, 0);
           color: #fff;
           border: 0;

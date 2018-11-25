@@ -112,12 +112,7 @@ export default (state={
       const curNav = state.main.children[state.main.on];
       state.main.children[state.main.on].children[state.main.children[state.main.on].on].val = action.payload;
       state.main.children[state.main.on].on = state.main.children[state.main.on].on;
-
       state = { ...state};
-      console.log(
-        state.main.children[state.main.on].children[state.main.children[state.main.on].on].val
-      );
-      
       break;
   }
   return state; 
