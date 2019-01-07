@@ -1,9 +1,13 @@
 import React from 'react';
+import {Editor, EditorState} from 'draft-js';
 
 export default class Content extends React.Component {
   constructor(props) {
     super(props);
-    console.log('constructor');
+    this.state = {
+      editorState: EditorState.createEmpty()
+    };
+    this.onChange = (editorState) => this.setState({editorState});
   }
   render () {
     const {content,change} = this.props;
@@ -17,8 +21,9 @@ export default class Content extends React.Component {
             </h3>
             <h6>{content.time}</h6>
             <div className="index-content__content">
-              {/* {content.val} */}
-              <textarea value={content.val} onChange={change}></textarea>
+              <Editor editorState={this.state.editorState} onChange={this.onChange} />
+              {/* <Editor editorState={content.val} onChange={change} /> */}
+              {/* <textarea value={content.val} onChange={change}></textarea> */}
             </div>
           </div>
         </div>

@@ -11,14 +11,17 @@ export default class Main extends React.Component {
         <div className="index-main">
           <div className="index-main__container">
             {(main.children
-              .map((e,i) => <div data-main={i} 
-              key={i} className={'index-main__item ' + (main.on===i?'on':'')}
-              >
-                {e.name}
-              </div>))}
+              .map((e,i) => 
+                <div data-main={i} 
+                  key={i} className={'index-main__item ' + (main.on===i?'on':'')}
+                >
+                  {e.name}
+                </div>
+              )
+            )}
           </div>
           <button onClick={create}>添加</button>
-          <button onClick={del}>删除</button>
+          {/* <button onClick={del}>删除</button> */}
         </div>
       )
     }else{
